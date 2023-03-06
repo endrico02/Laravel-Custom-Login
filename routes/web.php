@@ -18,3 +18,4 @@ use App\Http\Controllers\HomeController;
 Route::GET('/', [LoginController::class, 'ceklogin']);
 Route::POST('actionlogin', [LoginController::class, 'actionlogin']);
 Route::GET('home', [HomeController::class, 'index'])->name('home')->middleware('auth');
+Route::GET('actionlogout', [LoginController::class, 'actionlogout'])->middleware('auth');
